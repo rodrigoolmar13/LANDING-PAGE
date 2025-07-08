@@ -1,0 +1,247 @@
+:root {
+  --primario: #696969;
+  --primarioOscuro: #7fff00;
+  --secundario: #fff;
+  --secundarioOscuro: rgb(233, 187, 2);
+  --blanco: #fff;
+  --negro: #000;
+
+  --fuentePrincipal: "Staatliches", cursive;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/** Globales **/
+body {
+  background-color: var(--primario);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+}
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url(https://i.pinimg.com/736x/04/9b/70/049b703dc160a379883309a1f7626c5d.jpg);
+  background-size: cover;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  color: var(--secundario);
+  font-family: var(--fuentePrincipal);
+}
+h1 {
+  font-size: 4rem;
+}
+h2 {
+  font-size: 3.2rem;
+}
+h3 {
+  font-size: 2.4rem;
+}
+
+/** Header **/
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-image: url(https://i.pinimg.com/736x/9a/e7/2c/9ae72c6cfce1a6304e356e65b160ea72.jpg);
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+.header__logo {
+  margin: 0;
+  padding: 0;
+  width: 10rem;
+  height: auto;
+  border-radius: 3rem;
+}
+/** Footer **/
+.footer {
+  background-color: var(--primarioOscuro);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+  font-family: var(--fuentePrincipal);
+  text-transform: none !important;
+  text-align: center;
+  font-size: 2.2rem;
+}
+/** Navegacion **/
+.navegacion {
+  color: #ccc;
+  background-color: var(--primarioOscuro);
+  padding: 1rem 0;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.navegacion__enlace {
+  font-family: var(--fuentePrincipal);
+  color: var(--blanco);
+  font-size: 3rem;
+}
+.navegacion__enlace:hover {
+  background-color: orange;
+  color: var(--negro);
+}
+
+/** Grid **/
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 200px;
+  display: block;
+  height: 100%;
+}
+
+/** Nosotros **/
+.nosotros {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .nosotros {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+.nosotros__imagen {
+  width: 50%;
+  grid-row: 1 / 2;
+  margin-left: 100px;
+  border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .nosotros__imagen {
+    grid-column: 2 / 3;
+  }
+}
+
+/** Bloques **/
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .bloques {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.bloque {
+  text-align: center;
+}
+
+.bloque__titulo {
+  margin: 0;
+}
+
+/** Pagina del contacto **/
+
+.main-content {
+  background-image: url(https://i.pinimg.com/736x/04/9b/70/049b703dc160a379883309a1f7626c5d.jpg);
+  background-size: cover;
+}
+
+.contenedor-formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem;
+}
+
+.formulario {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.formulario h2 {
+  text-align: center;
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.boton {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: #45a049;
+}
